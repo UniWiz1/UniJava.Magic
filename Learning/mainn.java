@@ -1,22 +1,9 @@
 
 import java.util.Scanner;
 
-/**
- * Chapter 8 Exercise 21:
- *
- *      (Central city)
- *      Given a set of cities, the central city is the city that has the
- *      shortest total distance to all other cities. Write a program that
- *      prompts the user to enter the number of the cities and the locations
- *      of the cities (coordinates), and finds the central city and its total
- *      distance to all other cities.
- *
- * Created by Luiz Arantes Sa on 8/31/14.
- */
 public class mainn {
 
-    // index info: 0 = x | 1 = y | 2 = total distance to all other cities
-    // for simplicity
+
     static final int X = 0;
     static final int Y = 1;
     static final int DISTANCE = 2;
@@ -40,7 +27,6 @@ public class mainn {
         System.out.printf("The total distance to all other cities is %.2f", central[DISTANCE]);
     }
 
-    /** Compute the distance between two points (x1, y1) and (x2, y2)*/
     public static double distance(
             double x1, double y1, double x2, double y2) {
         return Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
@@ -59,8 +45,6 @@ public class mainn {
             }
         }
 
-        // find point with least total distance
-        // and return central point
         double[] central = points[0];
         for (int i = 1; i < points.length; i++) {
 
